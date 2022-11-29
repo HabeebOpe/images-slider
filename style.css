@@ -1,0 +1,85 @@
+*{
+   margin: 0;
+   padding: 0;
+   list-style: none;
+   box-sizing: border-box;
+}
+body{
+   background-color: #DFDFDF;
+   display: flex;
+   justify-content: space-around;
+   align-items: center;
+   min-height: 100vh;
+}
+.container{
+   width: 350px;
+   height: 210px;
+   overflow: hidden;
+}
+.container input{
+   display: none;
+}
+.container .outer{
+   position: relative;
+   display: flex;
+}
+.container .images{
+   position: absolute;
+   display: flex;
+   flex-direction: row;
+   transition: left 1s;
+}
+.container .images li{
+}
+.container .images img{
+   width: 350px;
+   height: 210px;
+}
+.rating{
+   position: relative;
+   height: 100%;
+   margin-top: 170px;
+   display: flex;
+   justify-content: space-between;
+   padding: 0 40px;
+}
+.rating label div{
+   width: 20px;
+   height: 20px;
+   border-radius: 50%;
+   border: 2px solid blue;
+}
+
+/* changing the emojis on clicking the stars */
+#star-1:checked ~ .outer .images{
+   left: 0px;
+} 
+#star-2:checked ~ .outer .images{
+   left: -350px;
+} 
+#star-3:checked ~ .outer .images{
+   left: -700px;
+} 
+#star-4:checked ~ .outer .images{
+   left: -1050px;
+} 
+#star-5:checked ~ .outer .images{
+   left: -1400px;
+} 
+#star-1:hover ~ .rating .slide-1,
+#star-1:checked ~ .rating .slide-1,
+
+#star-2:hover ~ .rating .slide-2,
+#star-2:checked ~ .rating .slide-2,
+
+#star-3:hover ~ .rating .slide-3,
+#star-3:checked ~ .rating .slide-3,
+
+#star-4:hover ~ .rating .slide-4,
+#star-4:checked ~ .rating .slide-4,
+
+#star-5:hover ~ .rating .slide-5,
+#star-5:checked ~ .rating .slide-5
+{
+   background-color: blue;
+}
